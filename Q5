@@ -1,0 +1,24 @@
+class Main {
+  public static void main(String[] args) {
+    char input = Console.getChar("enter Y to continue of N to Stop");
+    while (input == 'Y') {
+    int num1 = Console.getInt("Number 1");
+    int num2 = Console.getInt("Number 2");
+    sumRange(num1,num2);
+    input = Console.getChar("enter Y to continue of N to Stop");
+  }
+  }
+  public static void sumRange(int s , int e) { 
+    if (e < s ){
+        int temps = s;
+        s = e;
+        e = temps;
+
+    }
+
+    int n = e - s + 1;
+
+    int sum = (n * (s + e)) / 2;
+    System.out.println("Answer is  "+ sum);
+  }
+}
