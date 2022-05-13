@@ -1,0 +1,27 @@
+import java.lang.Math; // Import math library
+
+class Main {
+  public static void main(String[] args) {
+    double diameter = Console.getDouble("Enter the diameter");
+    double height = Console.getDouble("Enter the hight");
+    double sphere = volSphere(diameter);
+    double Cylinder = volCylinder(diameter,height);
+    System.out.printf("The sphere has a volume of: %.3f\n",sphere);
+    System.out.printf("The cylinder has a volume of: %.3f\n",Cylinder);
+  }
+
+  // calculate volume of sphere with specified diameter
+  public static double volSphere(double d){
+      double volSphere = (Math.PI * Math.pow(d,3)) / 6; 
+      return volSphere;
+  }
+
+  // calculate volume of cylinder with specified  
+  // diameter and height
+  public static double volCylinder(double d, double h){
+    double volCylinder = (Math.PI * Math.pow(d,2) * h) / 4;
+    return volCylinder;
+
+  }
+
+}
