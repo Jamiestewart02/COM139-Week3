@@ -1,0 +1,56 @@
+class Main {
+  public static void main(String[] args) {
+    int input;
+    do{
+      System.out.println("** Calculator **\n");
+      System.out.println("1. Add");
+      System.out.println("2. Subtract");
+      System.out.println("3. Multiply");
+      System.out.println("4. Divide");
+      System.out.println("0. Exit");
+      input = Console.getInt("\nEnter your choice: ");
+
+      switch(input){
+        case 1:
+          double num1 = Console.getDouble("\nEnter number 1: "); 
+          double num2 = Console.getDouble("\nEnter number 2: "); 
+          double result = add(num1, num2);
+          System.out.println("Result:" + result);
+          break;
+        case 2:
+          double num3 = Console.getDouble("\nEnter number 1: "); 
+          double num4 = Console.getDouble("\nEnter number 2: "); 
+          double result2 = subtract(num3, num4);
+          System.out.println("Result:" + result2);
+          break;
+        case 3:
+          double num5 = Console.getDouble("\nEnter number 1: "); 
+          double num6 = Console.getDouble("\nEnter number 2: "); 
+          double result3 = Multiply(num5, num6);
+          System.out.println("Result:" + result3);
+          break;
+        case 4:
+          double num7 = Console.getDouble("\nEnter number 1: "); 
+          double num8 = Console.getDouble("\nEnter number 2: "); 
+          double result4 = Divide(num7, num8);
+          System.out.println("Result:" + result4);
+          break;
+      }
+    }while(input!=0);
+  }
+  public static double add(double a, double b){
+    return a+b;
+  }
+  public static double subtract(double a, double b){
+    return a-b;
+  }
+  public static double Multiply(double a, double b){
+    return a*b;
+  }
+  public static double Divide(double a, double b){
+    return a/b;
+  }
+  public static void menu() {
+
+  }
+}
